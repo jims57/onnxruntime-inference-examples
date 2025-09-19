@@ -16,6 +16,7 @@
 		5197BEA229A0492D004B83DE /* pytorch_superresolution_with_pre_post_processing_opset18.onnx in Resources */ = {isa = PBXBuildFile; fileRef = 5197BEA029A0492D004B83DE /* pytorch_superresolution_with_pre_post_processing_opset18.onnx */; };
 		51AB38AF2981FA5E004E33B0 /* ORTSuperResolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB38AE2981FA5E004E33B0 /* ORTSuperResolutionTests.swift */; };
 		51D5968B2968DE9900F1CD43 /* ORTSuperResolutionPerformer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51D5968A2968DE9900F1CD43 /* ORTSuperResolutionPerformer.mm */; };
+		A0E76318CA3661183E13088C /* Pods_ORTSuperResolution.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EB676BC2A51A4D470A0565 /* Pods_ORTSuperResolution.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,9 @@
 		51D596892968DE9900F1CD43 /* ORTSuperResolutionPerformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORTSuperResolutionPerformer.h; sourceTree = "<group>"; };
 		51D5968A2968DE9900F1CD43 /* ORTSuperResolutionPerformer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ORTSuperResolutionPerformer.mm; sourceTree = "<group>"; };
 		51D5968C2968E16000F1CD43 /* ORTSuperResolution-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORTSuperResolution-Bridging-Header.h"; sourceTree = "<group>"; };
+		C59443249767C8CFC0BB11B6 /* Pods-ORTSuperResolution.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORTSuperResolution.debug.xcconfig"; path = "Target Support Files/Pods-ORTSuperResolution/Pods-ORTSuperResolution.debug.xcconfig"; sourceTree = "<group>"; };
+		D2EB676BC2A51A4D470A0565 /* Pods_ORTSuperResolution.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORTSuperResolution.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EE9217503913B69E48C93C /* Pods-ORTSuperResolution.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORTSuperResolution.release.xcconfig"; path = "Target Support Files/Pods-ORTSuperResolution/Pods-ORTSuperResolution.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E76318CA3661183E13088C /* Pods_ORTSuperResolution.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,7 @@
 				51AB38AD2981FA5E004E33B0 /* ORTSuperResolutionTests */,
 				5130D9B92968B93A009B4B88 /* Products */,
 				A16DBB08BBAF3DC3572038B4 /* Pods */,
+				C8BD6623D7F50F27EDDB4A85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,8 +121,18 @@
 		A16DBB08BBAF3DC3572038B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C59443249767C8CFC0BB11B6 /* Pods-ORTSuperResolution.debug.xcconfig */,
+				E0EE9217503913B69E48C93C /* Pods-ORTSuperResolution.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C8BD6623D7F50F27EDDB4A85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB676BC2A51A4D470A0565 /* Pods_ORTSuperResolution.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5130D9C62968B93C009B4B88 /* Build configuration list for PBXNativeTarget "ORTSuperResolution" */;
 			buildPhases = (
+				FE374BFF0A580908F18152BC /* [CP] Check Pods Manifest.lock */,
 				5130D9B42968B93A009B4B88 /* Sources */,
 				5130D9B52968B93A009B4B88 /* Frameworks */,
 				5130D9B62968B93A009B4B88 /* Resources */,
@@ -217,6 +234,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE374BFF0A580908F18152BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ORTSuperResolution-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5130D9B42968B93A009B4B88 /* Sources */ = {
@@ -368,6 +410,7 @@
 		};
 		5130D9C72968B93C009B4B88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C59443249767C8CFC0BB11B6 /* Pods-ORTSuperResolution.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,7 +419,7 @@
 				COMPRESS_PNG_FILES = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ORTSuperResolution/Preview Content\"";
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = GKDHR6NP9R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -390,7 +433,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.ORTSuperResolution;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.watchfun.ORTSuperResolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_PNG_TEXT = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -403,6 +446,7 @@
 		};
 		5130D9C82968B93C009B4B88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0EE9217503913B69E48C93C /* Pods-ORTSuperResolution.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -411,7 +455,7 @@
 				COMPRESS_PNG_FILES = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ORTSuperResolution/Preview Content\"";
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = GKDHR6NP9R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -425,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.ORTSuperResolution;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.watchfun.ORTSuperResolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_PNG_TEXT = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -441,11 +485,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = GKDHR6NP9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.ORTSuperResolutionTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.watchfun.ORTSuperResolutionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -460,11 +504,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = GKDHR6NP9R;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MS.ORTSuperResolutionTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.watchfun.ORTSuperResolutionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

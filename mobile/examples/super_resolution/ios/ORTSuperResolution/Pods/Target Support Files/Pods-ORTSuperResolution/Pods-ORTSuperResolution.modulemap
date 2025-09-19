@@ -1,0 +1,6 @@
+framework module Pods_ORTSuperResolution {
+  umbrella header "Pods-ORTSuperResolution-umbrella.h"
+
+  export *
+  module * { export * }
+}
